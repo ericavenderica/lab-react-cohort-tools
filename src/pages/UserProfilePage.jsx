@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function UserProfilePage() {
   const userProfile = {
     image: "https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-cohort-tools-routing/profile-1.png",
@@ -32,14 +34,16 @@ function UserProfilePage() {
           </>
         )}
 
-        {/* Back button */}        
-        <button className="text-white px-4 py-2 rounded bg-green-500 hover:bg-green-600 transition duration-300 ease-in-out">
-          Back
-        </button>
-        
+        {/* Back button */}      
+          <Link to="/">
+          <button className="mt-6 bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 block mx-auto">
+            Back
+          </button>
+        </Link>
       </div>
     </div>
   );
 }
+
 
 export default UserProfilePage;
